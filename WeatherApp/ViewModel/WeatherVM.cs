@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WeatherApp.Model;
+using WeatherApp.ViewModel.Commands;
 using WeatherApp.ViewModel.Helpers;
 
 namespace WeatherApp.ViewModel
@@ -48,6 +49,9 @@ namespace WeatherApp.ViewModel
         }
 
 
+        public SearchCommand SearchCommand { get; set; }
+
+
         public WeatherVM()
         {
             if(DesignerProperties.GetIsInDesignMode(new System.Windows.DependencyObject())) //If this is true, means that we are currently not running the application and we are currently only designing the application.
@@ -68,6 +72,8 @@ namespace WeatherApp.ViewModel
                    }
                };
             }
+
+            SearchCommand = new SearchCommand(this);
         }
 
         public async void MakeQuery()
