@@ -39,7 +39,8 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <StackPanel Margin="0,10">
-                <TextBlock DataContext="{StaticResource vm}" Text="{Binding SelectedCity.LocalizedName}"
+                <TextBlock DataContext="{StaticResource vm}" 
+                           Text="{Binding SelectedCity.LocalizedName}"
                            Foreground="#f4f4f8"
                            FontSize="20"
                            Margin="20,0"/>

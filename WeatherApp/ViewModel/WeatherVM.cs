@@ -47,6 +47,27 @@ namespace WeatherApp.ViewModel
         }
 
 
+        public WeatherVM()
+        {
+            if(DesignerProperties.GetIsInDesignMode(new System.Windows.DependencyObject())) //If this is true, means that we are currently not running the application and we are currently only designing the application.
+            { 
+               SelectedCity = new City
+               {
+                   LocalizedName = "New York"
+               };
+               CurrentConditions = new CurrentConditions
+               {
+                   WeatherText = "Partly cloudy",
+                   Temperature = new Temperature
+                   {
+                       Metric = new Units
+                       {
+                        Value = 21
+                       }
+                   }
+               };
+            }
+        }
 
 
 
