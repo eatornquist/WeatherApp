@@ -108,10 +108,11 @@ namespace WeatherApp.ViewModel
         }
 
         
-        public event PropertyChangedEventHandler? PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged(string propertyName)
         {
+            if(Cities != null)
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
