@@ -112,7 +112,7 @@ namespace WeatherApp.ViewModel
 
         private void OnPropertyChanged(string propertyName)
         {
-            if(Cities != null)
+            //if(Cities != null)
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
